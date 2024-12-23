@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+  a {
+    @apply text-xl text-gray-700;
+  }
+
+  img {
+    @apply max-w-full object-cover object-center w-full;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  body {
+    position: relative;
+    /* @apply min-h-screen bg-orange-400; */
+  }
+
+  input {
+    @apply py-3 shadow-lg border-2 px-2 rounded-lg;
+  }
+
+  a.active {
+    color: red;
+  }
+}
+
+@layer components {
+  .con {
+    @apply container mx-auto my-8 w-11/12;
+  }
+  .btn {
+    @apply px-6 py-3 border-2 border-gray-500 rounded-xl hover:bg-orange-300 bg-white text-black;
+  }
+
+  .grid_auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .btn_primary {
+    @apply bg-orange-500 text-white hover:bg-orange-600 border-none;
+  }
+
+  .btn_minus {
+    @apply bg-pink-200 rounded-full p-2 text-pink-500;
+  }
+
+  .btn_plus {
+    @apply bg-green-300 rounded-full p-2 text-green-600;
+  }
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .grid_layout {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content 1fr;
+    /* border: 2px solid red; */
+    min-height: 100vh;
+    gap: 2em;
+    padding-block: 1em;
+  }
+
+  .flex_layout {
+    @apply flex gap-3 py-3;
+  }
+
+  .flex_layout.active {
+    background-color: rgba(246, 138, 138, 0.423);
+  }
+
+  .none {
+    border: 2px solid black;
+    padding: 0.5em;
+  }
+  .btn {
+    padding: 0.5em 3em;
+    background-color: rgb(250, 169, 69);
+    color: white;
+  }
+}
+
+@layer base {
+  body {
+    background-color: rgb(252, 247, 247);
+  }
+  input {
+    border: 2px solid black;
+    padding: 0.5em;
+  }
+}
